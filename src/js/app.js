@@ -23,7 +23,7 @@ function crearGaleria() {
     const CANTIDAD_IMAGENES = 16
     for (let i=1; i <= CANTIDAD_IMAGENES; i++){
         const imagen = document.createElement('IMG')
-        imagen.src = `build/img/gallery/full/${i}.jpg`
+        imagen.src = `img/gallery/full/${i}.jpg`
         imagen.alt = 'Imagen Galeria'
 
         //event handler
@@ -37,7 +37,7 @@ function crearGaleria() {
 
 function mostrarImagenes(i) {
     const imagen = document.createElement('IMG')
-    imagen.src = `build/img/gallery/full/${i}.jpg`
+    imagen.src = `img/gallery/full/${i}.jpg`
     imagen.alt = `Imagen Galeria`
     //generar Modal
     const modal = document.createElement('DIV')
