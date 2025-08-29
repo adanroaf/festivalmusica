@@ -22,4 +22,16 @@ export function dev() {
     watch('src/js/**/*.js', js)
 }
 
-export default series(js, css, dev)
+export function html(done) {
+  src('*.html')
+    .pipe(dest('build/'));
+  done();
+}
+
+export function assets(done) {
+  src(['src/img/**/*', 'video/**/*'], { base: '.' })
+    .pipe(dest('build'));
+  done();
+}
+
+export default series(html, assets, js, css, dev);
