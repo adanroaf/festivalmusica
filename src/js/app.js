@@ -23,8 +23,8 @@ function crearGaleria() {
     const CANTIDAD_IMAGENES = 16
     for (let i=1; i <= CANTIDAD_IMAGENES; i++){
         const imagen = document.createElement('IMG')
-        imagen.src = `src/img/gallery/full/${i}.jpg`
-        imagen.alt = `Imagen Galeria`
+        imagen.src = `img/gallery/full/${i}.jpg`
+        imagen.alt = 'Imagen Galeria'
 
         //event handler
         imagen.onclick = function () {
