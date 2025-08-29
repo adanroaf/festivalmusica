@@ -29,8 +29,8 @@ export function html(done) {
 }
 
 export function assets(done) {
-  src(['src/img/**/*', 'video/**/*'], { base: '.' })
-    .pipe(dest('build'));
+  src('src/img/**/*').pipe(dest('build/img'));
+  src('video/**/*').pipe(dest('build/video'));
   done();
 }
 
